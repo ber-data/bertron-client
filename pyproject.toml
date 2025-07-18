@@ -22,8 +22,11 @@ description = "Cross-BER Data Integration Client"
 readme = "README.md"
 requires-python = ">=3.12.9,<3.14"
 dependencies = [
+  # NOTE: bertron and bertron-schema won't be needed when we autogenerate the client from
+  # NOTE: an OpenAPI spec.
+  "bertron @ git+https://github.com/ber-data/bertron.git",
   "bertron-schema @ git+https://github.com/ber-data/bertron-schema.git",
-#  "jsonschema>=4.0.0",
+  #"jsonschema>=4.0.0",
   "pytest>=8.4.0",
   "uvicorn>=0.34.3",
 ]
