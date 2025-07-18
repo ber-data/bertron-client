@@ -15,18 +15,15 @@ name = "bertron"
 #
 version = "0.0.0"
 authors = [
-  {name = "Chuck Parker", email = "ctparker@lbl.gov"},
+  {name = "Charles Parker", email = "ctparker@lbl.gov"},
+  {name = "Jeffrey N. Johnson", email = "jeff@cohere-llc.com"},
 ]
-description = " Cross-BER Data Integration"
+description = "Cross-BER Data Integration Client"
 readme = "README.md"
 requires-python = ">=3.12.9,<3.14"
 dependencies = [
   "bertron-schema @ git+https://github.com/ber-data/bertron-schema.git",
-  "dtspy @ https://github.com/kbase/dtspy/archive/730828cff3924fc4b2215fe5c1b67bc04aad377f.tar.gz",
-  "fastapi[standard]>=0.115.12",
-  "jsonschema>=4.0.0",
-  "nmdc-api-utilities>=0.3.9",
-  "pymongo>=4.13.1",
+#  "jsonschema>=4.0.0",
   "pytest>=8.4.0",
   "uvicorn>=0.34.3",
 ]
