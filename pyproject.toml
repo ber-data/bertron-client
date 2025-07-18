@@ -5,7 +5,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bertron"
+name = "bertron-client"
 # Project version identifier.
 #
 # Note: The GitHub Actions workflow in `.github/workflows/build-and-push-image.yaml`
