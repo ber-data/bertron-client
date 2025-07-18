@@ -26,6 +26,10 @@ dependencies = [
   # NOTE: an OpenAPI spec.
   "bertron @ git+https://github.com/ber-data/bertron.git",
   "bertron-schema @ git+https://github.com/ber-data/bertron-schema.git",
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "seaborn",
   #"jsonschema>=4.0.0",
   "pytest>=8.4.0",
   "uvicorn>=0.34.3",
