@@ -19,6 +19,9 @@ from schema.datamodel.bertron_schema_pydantic import Entity
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# BERtron API URL
+
+berton_base_url = "https://bertron-api.bertron.production.svc.spin.nersc.org/bertron/"
 
 @dataclass
 class QueryResponse:
@@ -39,7 +42,7 @@ class BertronAPIError(Exception):
 class BertronClient:
     """Client for interacting with the BERtron API."""
 
-    def __init__(self, base_url: str = "http://localhost:8000", timeout: int = 30):
+    def __init__(self, base_url: str = berton_base_url, timeout: int = 30):
         """
         Initialize the BERtron client.
 
@@ -50,6 +53,7 @@ class BertronClient:
         self.base_url = base_url.rstrip("/")
         self.timeout = timeout
         self.session = requests.Session()
+        self.session.verify = False # NOTE: till we get SSL certs in place
         self.session.headers.update(
             {"Content-Type": "application/json", "Accept": "application/json"}
         )
