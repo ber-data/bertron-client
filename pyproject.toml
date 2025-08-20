@@ -27,7 +27,7 @@ dependencies = [
   "bertron @ git+https://github.com/ber-data/bertron.git@v0.1.0-alpha.10",
   "bertron-schema @ git+https://github.com/ber-data/bertron-schema.git@v0.1.0-alpha.10",
   "numpy",
-  "pandas",
+  "pandas>=2.2.2",
   "matplotlib",
   "seaborn",
   #"jsonschema>=4.0.0",
